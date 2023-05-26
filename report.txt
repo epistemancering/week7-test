@@ -1,0 +1,13 @@
+               |doublerAppend|doublerInsert
+---------------+-------------+-------------
+   tinyArray   |   6.9 μs    |   6.1 μs
+---------------+-------------+-------------
+  smallArray   |   7.1 μs    |    10 μs
+---------------+-------------+-------------
+  mediumArray  |   32.1 μs   |  123.9 μs
+---------------+-------------+-------------
+  largeArray   |   121 μs    |  7.233 ms
+---------------+-------------+-------------
+extraLargeArray|  2.8649 ms  | 734.5101 ms
+
+All of the times are affected by a small but unpredictable factor that precludes drawing confident conclusions from tinyArray or smallArray from any single trial on my computer. However, comparing the times of mediumArray, largeArray, and extraLargeArray, it appears that doublerAppend times scale approximately linearly compared to array length, whereas doublerInsert times scale approximately quadratically, which is slower. This is unsurprising since insertion modifies the index of each subsequent item in an array and appending does not.
