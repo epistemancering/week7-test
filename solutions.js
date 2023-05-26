@@ -11,12 +11,6 @@ function addToZero(numbers) {
     return false
 }
 
-console.log(addToZero([]), addToZero([1]), addToZero([1, 2, 3]), addToZero([1, 2, 3, -2]))
-
-
-
-
-
 //linear time and space
 function hasUniqueChars(word) {
     let map = {}
@@ -29,12 +23,6 @@ function hasUniqueChars(word) {
     }
     return true
 }
-
-console.log(hasUniqueChars("Monday"), hasUniqueChars("Moonday"))
-
-
-
-
 
 //linear time and constant space
 function isPangram(sentence) {
@@ -52,12 +40,6 @@ function isPangram(sentence) {
     return false
 }
 
-console.log(isPangram("The quick brown fox jumps over the lazy dog!"), isPangram("I like cats, but not mice"))
-
-
-
-
-
 //linear time and constant space
 function findLongestWord(words) {
     let longest = 0
@@ -68,5 +50,3 @@ function findLongestWord(words) {
     }
     return longest
 }
-
-console.log(findLongestWord(["hi", "hello"]))
